@@ -347,7 +347,7 @@ lazy val chipyard_fpga = (project in file("./fpga"))
   .dependsOn(chipyard, fpga_shells)
   .settings(commonSettings)
 
-lazy val chipyard_vivado_ip_src = (project in file("./chipyard-vivado-ip-src"))
+lazy val chipyard_vivado_ip_src = (project in file("./chipyard-vivado-ip-src.git"))
   .dependsOn(chipyard,rocketchip, rocketchip_blocks)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
