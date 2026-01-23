@@ -151,3 +151,6 @@
 [submodule "generators/radiance"]
 	path = generators/radiance
 	url = https://github.com/ucb-bar/radiance.git
+[submodule "chipyard-vivado-ip-src.git"]
+	path = chipyard-vivado-ip-src.git
+	url = git@github.com:OpenCUTE/chipyard-vivado-ip-src.git

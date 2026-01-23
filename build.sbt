@@ -347,6 +347,10 @@ lazy val chipyard_fpga = (project in file("./fpga"))
   .dependsOn(chipyard, fpga_shells)
   .settings(commonSettings)
 
+lazy val chipyard_vivado_ip_src = (project in file("./chipyard-vivado-ip-src"))
+  .dependsOn(chipyard,rocketchip, rocketchip_blocks)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(commonSettings)
 // Components of FireSim
 
 lazy val firrtl2 = freshProject("firrtl2", file("./tools/firrtl2"))
