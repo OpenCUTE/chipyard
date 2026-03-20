@@ -154,3 +154,6 @@
 [submodule "chipyard-vivado-ip-src.git"]
 	path = chipyard-vivado-ip-src.git
 	url = git@github.com:OpenCUTE/chipyard-vivado-ip-src.git
+[submodule "union_check_point"]
+	path = union_check_point
+	url = git@github.com:OpenCUTE/union_check_point.git
