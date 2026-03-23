@@ -158,7 +158,7 @@ lazy val chipyard = (project in file("generators/chipyard"))
     dsptools, rocket_dsp_utils,
     radiance, gemmini, icenet, tracegen, cva6, nvdla, sodor, ibex, fft_generator,
     constellation, mempress, barf, shuttle, caliptra_aes, rerocc, cute,cutev3,
-    compressacc, saturn, ara, firrtl2_bridge, vexiiriscv, tacit)
+    compressacc, saturn, ara, firrtl2_bridge, vexiiriscv, tacit,fudian)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(
     libraryDependencies ++= Seq(
@@ -184,8 +184,12 @@ lazy val barf = (project in file("generators/bar-fetchers"))
   .settings(commonSettings)
 
 lazy val saturn = (project in file("generators/saturn"))
-  .dependsOn(rocketchip, shuttle)
+  .dependsOn(rocketchip, shuttle, fudian)
   .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(commonSettings)
+
+lazy val fudian = (project in file("generators/fudian"))
+  .settings(chiselSettings) // stuck on chisel3 and SFC
   .settings(commonSettings)
 
 lazy val constellation = (project in file("generators/constellation"))
