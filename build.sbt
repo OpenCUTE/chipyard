@@ -228,6 +228,9 @@ lazy val ara = (project in file("generators/ara"))
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
 
+lazy val cutetrace = (project in file("generators/cutetrace"))
+  .settings(commonSettings)
+
 lazy val cute = (project in file("generators/cute"))
   .dependsOn(rocketchip)
   .settings(libraryDependencies ++= rocketLibDeps.value)
