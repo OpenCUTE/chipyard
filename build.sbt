@@ -230,9 +230,11 @@ lazy val ara = (project in file("generators/ara"))
 
 lazy val cutetrace = (project in file("generators/cutetrace"))
   .settings(commonSettings)
+  .settings(chiselSettings)
+
 
 lazy val cute = (project in file("generators/cute"))
-  .dependsOn(rocketchip)
+  .dependsOn(rocketchip,cutetrace)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
 lazy val cutev3 = (project in file("generators/cute-v3"))
