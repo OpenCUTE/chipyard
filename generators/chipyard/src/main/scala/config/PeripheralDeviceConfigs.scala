@@ -58,6 +58,7 @@ class MMIORocketConfig extends Config(
 
 // DOC include start: DmiRocket
 class dmiRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithExtMemSize((1<<30) * 4L) ++ // use 1GB simulated external memory
   new chipyard.harness.WithSerialTLTiedOff ++                    // don't attach anything to serial-tl
   new chipyard.config.WithDMIDTM ++                              // have debug module expose a clocked DMI port
   new freechips.rocketchip.rocket.WithNHugeCores(1) ++
