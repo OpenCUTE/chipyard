@@ -184,7 +184,7 @@ lazy val barf = (project in file("generators/bar-fetchers"))
   .settings(commonSettings)
 
 lazy val saturn = (project in file("generators/saturn"))
-  .dependsOn(rocketchip, shuttle)
+  .dependsOn(rocketchip, shuttle, cutetrace)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
 
