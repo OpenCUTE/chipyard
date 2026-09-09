@@ -120,6 +120,43 @@ class CUTE2TopsSCP64Config extends Config(
   new freechips.rocketchip.subsystem.WithoutTLMonitors ++
   new chipyard.config.AbstractConfig)
 
+// Keep the normal CUTE2TopsSCP64Config quiet.  This variant records every
+// CMemoryLoader store so GEMM output writes can be checked against golden data.
+class CUTE2TopsSCP64CMLDebugConfig extends Config(
+  new cute.WithCuteCoustomParams(
+    CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP.copy(
+      Debug = CuteDebugParams.CMLDebugEnable)) ++
+  new cute.WithCUTE(Seq(0)) ++
+  new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
+  new freechips.rocketchip.subsystem.WithCacheHash ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
+  new chipyard.config.WithSystemBusWidth(512) ++
+  new shuttle.common.WithShuttleTileBeatBytes(64) ++
+  new shuttle.common.WithNShuttleCores(1) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new chipyard.config.AbstractConfig)
+
+// Narrow datapath trace used to validate MatrixTE's A/B/C/D transactions
+// against a software GEMM reference.
+class CUTE2TopsSCP64NumericDebugConfig extends Config(
+  new cute.WithCuteCoustomParams(
+    CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP.copy(
+      Debug = CuteDebugParams.CMLDebugEnable.copy(
+        YJPMACDebugEnable = true,
+        YJPADCDebugEnable = true,
+        YJPBDCDebugEnable = true))) ++
+  new cute.WithCUTE(Seq(0)) ++
+  new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
+  new freechips.rocketchip.subsystem.WithCacheHash ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
+  new chipyard.config.WithSystemBusWidth(512) ++
+  new shuttle.common.WithShuttleTileBeatBytes(64) ++
+  new shuttle.common.WithNShuttleCores(1) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new chipyard.config.AbstractConfig)
+
 // cute2tops_small_boom
 class CUTE2TopsSmallBoomConfig extends Config(
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP) ++
@@ -205,6 +242,44 @@ class CUTE4TopsSCP512Config extends Config(
 // cute4tops_scp64
 class CUTE4TopsSCP64Config extends Config(
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP) ++
+  new cute.WithCUTE(Seq(0)) ++
+  new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
+  new freechips.rocketchip.subsystem.WithCacheHash ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
+  new chipyard.config.WithSystemBusWidth(512) ++
+  new shuttle.common.WithShuttleTileBeatBytes(64) ++
+  new shuttle.common.WithNShuttleCores(1) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new chipyard.config.AbstractConfig)
+
+// Records every CMemoryLoader D write so 512-bit GEMM output can be checked
+// against the C-model oracle without changing the normal 4TOPS configuration.
+class CUTE4TopsSCP64CMLDebugConfig extends Config(
+  new cute.WithCuteCoustomParams(
+    CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP.copy(
+      Debug = CuteDebugParams.CMLDebugEnable)) ++
+  new cute.WithCUTE(Seq(0)) ++
+  new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
+  new freechips.rocketchip.subsystem.WithCacheHash ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
+  new chipyard.config.WithSystemBusWidth(512) ++
+  new shuttle.common.WithShuttleTileBeatBytes(64) ++
+  new shuttle.common.WithNShuttleCores(1) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new chipyard.config.AbstractConfig)
+
+// Adds A/B scale-controller and MatrixTE transaction traces to the 4TOPS
+// 512-bit configuration.  It is diagnostic-only and leaves the normal
+// CMLDebug configuration unchanged.
+class CUTE4TopsSCP64NumericDebugConfig extends Config(
+  new cute.WithCuteCoustomParams(
+    CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP.copy(
+      Debug = CuteDebugParams.CMLDebugEnable.copy(
+        YJPMACDebugEnable = true,
+        YJPADCDebugEnable = true,
+        YJPBDCDebugEnable = true))) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
   new freechips.rocketchip.subsystem.WithCacheHash ++
