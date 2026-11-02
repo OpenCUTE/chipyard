@@ -1,6 +1,6 @@
-// Auto-generated from configs/chipyard_configs/cute05tops_scp64.yaml, configs/chipyard_configs/cute16tops_scp256.yaml, configs/chipyard_configs/cute16tops_scp512.yaml, configs/chipyard_configs/cute1tops_scp128.yaml, configs/chipyard_configs/cute1tops_scp64.yaml, configs/chipyard_configs/cute2tops_scp128.yaml, configs/chipyard_configs/cute2tops_scp256.yaml, configs/chipyard_configs/cute2tops_scp64.yaml, configs/chipyard_configs/cute2tops_small_boom.yaml, configs/chipyard_configs/cute2tops_small_rocket.yaml, configs/chipyard_configs/cute32tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp128.yaml, configs/chipyard_configs/cute4tops_scp256.yaml, configs/chipyard_configs/cute4tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp64.yaml, configs/chipyard_configs/cute4tops_shuttle512_d512_v512_m512_sysbus512_membus1_core.yaml, configs/chipyard_configs/cute8tops_scp128.yaml, configs/chipyard_configs/cute8tops_scp256.yaml, configs/chipyard_configs/cute8tops_scp512.yaml
+// Auto-generated from configs/chipyard_configs/cute05tops_scp64.yaml, configs/chipyard_configs/cute16tops_scp256.yaml, configs/chipyard_configs/cute16tops_scp512.yaml, configs/chipyard_configs/cute1tops_scp128.yaml, configs/chipyard_configs/cute1tops_scp64.yaml, configs/chipyard_configs/cute2tops_scp128.yaml, configs/chipyard_configs/cute2tops_scp256.yaml, configs/chipyard_configs/cute2tops_scp64.yaml, configs/chipyard_configs/cute2tops_small_boom.yaml, configs/chipyard_configs/cute2tops_small_rocket.yaml, configs/chipyard_configs/cute32tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp128.yaml, configs/chipyard_configs/cute4tops_scp256.yaml, configs/chipyard_configs/cute4tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp64.yaml, configs/chipyard_configs/cute4tops_shuttle512_d512_v512_m512_sysbus512_membus1_core.yaml, configs/chipyard_configs/cute4tops_shuttle512_memorymap_demo.yaml, configs/chipyard_configs/cute8tops_scp128.yaml, configs/chipyard_configs/cute8tops_scp256.yaml, configs/chipyard_configs/cute8tops_scp512.yaml
 // DO NOT EDIT MANUALLY.
-// Generated at: Wed May 13 09:14:35 2026
+// Generated at: Sat Oct 31 01:48:29 2026
 
 package chipyard
 
@@ -10,6 +10,7 @@ import cute._
 
 // cute05tops_scp64
 class CUTE05TopsSCP64Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_05Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -24,6 +25,7 @@ class CUTE05TopsSCP64Config extends Config(
 
 // cute16tops_scp256
 class CUTE16TopsSCP256Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_16Tops_256SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -38,6 +40,7 @@ class CUTE16TopsSCP256Config extends Config(
 
 // cute16tops_scp512
 class CUTE16TopsSCP512Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_16Tops_512SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -52,6 +55,7 @@ class CUTE16TopsSCP512Config extends Config(
 
 // cute1tops_scp128
 class CUTE1TopsSCP128Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_1Tops_128SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -66,6 +70,7 @@ class CUTE1TopsSCP128Config extends Config(
 
 // cute1tops_scp64
 class CUTE1TopsSCP64Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_1Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -80,6 +85,7 @@ class CUTE1TopsSCP64Config extends Config(
 
 // cute2tops_scp128
 class CUTE2TopsSCP128Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_128SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -94,6 +100,7 @@ class CUTE2TopsSCP128Config extends Config(
 
 // cute2tops_scp256
 class CUTE2TopsSCP256Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_256SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -108,6 +115,7 @@ class CUTE2TopsSCP256Config extends Config(
 
 // cute2tops_scp64
 class CUTE2TopsSCP64Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -122,6 +130,7 @@ class CUTE2TopsSCP64Config extends Config(
 
 // cute2tops_small_boom
 class CUTE2TopsSmallBoomConfig extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -135,6 +144,7 @@ class CUTE2TopsSmallBoomConfig extends Config(
 
 // cute2tops_small_rocket
 class CUTE2TopsSmallRocketConfig extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_2Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -148,6 +158,7 @@ class CUTE2TopsSmallRocketConfig extends Config(
 
 // cute32tops_scp512
 class CUTE32TopsSCP512Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_32Tops_512SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -162,6 +173,7 @@ class CUTE32TopsSCP512Config extends Config(
 
 // cute4tops_scp128
 class CUTE4TopsSCP128Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_128SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -176,6 +188,7 @@ class CUTE4TopsSCP128Config extends Config(
 
 // cute4tops_scp256
 class CUTE4TopsSCP256Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_256SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -190,6 +203,7 @@ class CUTE4TopsSCP256Config extends Config(
 
 // cute4tops_scp512
 class CUTE4TopsSCP512Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_512SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -204,6 +218,7 @@ class CUTE4TopsSCP512Config extends Config(
 
 // cute4tops_scp64
 class CUTE4TopsSCP64Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -218,6 +233,24 @@ class CUTE4TopsSCP64Config extends Config(
 
 // cute4tops_shuttle512_d512_v512_m512_sysbus512_membus1_core
 class CUTE4TopsShuttle512D512V512M512Sysbus512Membus1CoreConfig extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
+  new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP) ++
+  new cute.WithCUTE(Seq(0)) ++
+  new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
+  new freechips.rocketchip.subsystem.WithCacheHash ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
+  new chipyard.config.WithSystemBusWidth(512) ++
+  new saturn.shuttle.WithShuttleVectorUnit(vLen = 512, dLen = 512, VectorParams.CUTErefParams, mLen = Option(512)) ++
+  new shuttle.common.WithTCM(address = 0x70000000L, size = 2L << 20, banks = 2) ++
+  new shuttle.common.WithShuttleTileBeatBytes(64) ++
+  new shuttle.common.WithNShuttleCores(1) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new chipyard.config.AbstractConfig)
+
+// cute4tops_shuttle512_memorymap_demo
+class CUTE4TopsShuttle512MemorymapDemoConfig extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("20000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("120000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("130000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("3000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("18000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10030000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("90000000", 16), BigInt("10000000", 16))), Seq(freechips.rocketchip.resources.ReservedMemoryRegion("firmware", BigInt("90000000", 16), BigInt("10000", 16), true), freechips.rocketchip.resources.ReservedMemoryRegion("shared_buffer", BigInt("98000000", 16), BigInt("10000", 16), true), freechips.rocketchip.resources.ReservedMemoryRegion("top_guard", BigInt("9fff0000", 16), BigInt("10000", 16), true))) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_4Tops_64SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -234,6 +267,7 @@ class CUTE4TopsShuttle512D512V512M512Sysbus512Membus1CoreConfig extends Config(
 
 // cute8tops_scp128
 class CUTE8TopsSCP128Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_8Tops_128SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -248,6 +282,7 @@ class CUTE8TopsSCP128Config extends Config(
 
 // cute8tops_scp256
 class CUTE8TopsSCP256Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_8Tops_256SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++
@@ -262,6 +297,7 @@ class CUTE8TopsSCP256Config extends Config(
 
 // cute8tops_scp512
 class CUTE8TopsSCP512Config extends Config(
+  new chipyard.config.WithOpenCUTEMemoryMap(Seq(chipyard.config.MemoryMapRegion("boot_rom", BigInt("10000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("prci_clock", BigInt("100000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("prci_reset", BigInt("110000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("clint", BigInt("2000000", 16), BigInt("10000", 16)), chipyard.config.MemoryMapRegion("plic", BigInt("c000000", 16), BigInt("4000000", 16)), chipyard.config.MemoryMapRegion("uart", BigInt("10020000", 16), BigInt("1000", 16)), chipyard.config.MemoryMapRegion("external_ram", BigInt("80000000", 16), BigInt("80000000", 16))), Seq()) ++
   new cute.WithCuteCoustomParams(CoustomCuteParam = HardwareConfig.CUTE_8Tops_512SCP) ++
   new cute.WithCUTE(Seq(0)) ++
   new freechips.rocketchip.subsystem.WithNBitMemoryBus(512) ++

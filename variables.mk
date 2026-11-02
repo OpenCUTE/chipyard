@@ -259,7 +259,7 @@ endef
 # (1) - sbt project to assemble
 # (2) - classpath file(s) to create
 define run_sbt_assembly
-	cd $(base_dir) && $(SBT) ";project $(1); set assembly / assemblyOutputPath := file(\"$(2)\"); assembly" && touch $(2)
+	cd $(base_dir) && $(SBT) ";project $(1); set assembly / assemblyOutputPath := file(\"$(2)\"); set assembly / assemblyCacheOutput := false; assembly" && test -s "$(2)" && touch "$(2)"
 endef
 
 #########################################################################################
