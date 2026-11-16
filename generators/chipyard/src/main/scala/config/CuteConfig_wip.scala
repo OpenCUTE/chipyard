@@ -82,11 +82,13 @@ class L2DramPerformenceTest4CUTEM256Config extends Config(
   new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB=512,outerLatencyCycles=100) ++
   new chipyard.config.AbstractConfig)
 
+/*
 class YJPFPGACUTESmallBoomConfig extends Config(
   new cute.WithCUTE(Seq(0)) ++
   new chipyard.config.WithSystemBusWidth(256) ++
   new boom.v3.common.WithNSmallBoomsMMIOSpeedUp(1) ++                          // small boom config
   new chipyard.config.YJPAbstractConfig)
+*/
 
 class CUTESmallBoomConfig extends Config(
   new cute.WithCUTE(Seq(0)) ++
