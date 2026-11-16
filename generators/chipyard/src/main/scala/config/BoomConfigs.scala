@@ -11,7 +11,7 @@ import freechips.rocketchip.devices.tilelink.{BootROMLocated}
 // ---------------------
 // BOOM Bobcat Configs
 // ---------------------
-
+/*
 class SmallBobcatConfig extends Config(
   new boom.bobcat.common.WithVector(1) ++
   // new WithCustomBootROM ++                                       // Use custom BootROM to enable COSIM
@@ -22,7 +22,7 @@ class Bobcat128bitdram512bitL2Widen3issueBoom extends Config(
   new boom.bobcat.common.WithVector(3) ++
   new boom.bobcat.common.WithN3IssueWidenBooms(1) ++                    // 3 issue boom config
   new chipyard.config.AbstractConfig)
-
+*/
 // ---------------------
 // BOOM V3 Configs
 // Performant, stable baseline

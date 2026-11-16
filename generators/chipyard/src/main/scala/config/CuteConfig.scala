@@ -1,6 +1,6 @@
 // Auto-generated from configs/chipyard_configs/cute05tops_scp64.yaml, configs/chipyard_configs/cute16tops_scp256.yaml, configs/chipyard_configs/cute16tops_scp512.yaml, configs/chipyard_configs/cute1tops_scp128.yaml, configs/chipyard_configs/cute1tops_scp64.yaml, configs/chipyard_configs/cute2tops_scp128.yaml, configs/chipyard_configs/cute2tops_scp256.yaml, configs/chipyard_configs/cute2tops_scp64.yaml, configs/chipyard_configs/cute2tops_small_boom.yaml, configs/chipyard_configs/cute2tops_small_rocket.yaml, configs/chipyard_configs/cute32tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp128.yaml, configs/chipyard_configs/cute4tops_scp256.yaml, configs/chipyard_configs/cute4tops_scp512.yaml, configs/chipyard_configs/cute4tops_scp64.yaml, configs/chipyard_configs/cute4tops_shuttle512_d512_v512_m512_sysbus512_membus1_core.yaml, configs/chipyard_configs/cute4tops_shuttle512_memorymap_demo.yaml, configs/chipyard_configs/cute8tops_scp128.yaml, configs/chipyard_configs/cute8tops_scp256.yaml, configs/chipyard_configs/cute8tops_scp512.yaml
 // DO NOT EDIT MANUALLY.
-// Generated at: Sat Oct 31 01:48:29 2026
+// Generated at: Mon Nov 16 10:33:46 2026
 
 package chipyard
 
@@ -241,7 +241,7 @@ class CUTE4TopsShuttle512D512V512M512Sysbus512Membus1CoreConfig extends Config(
   new freechips.rocketchip.subsystem.WithNBanks(4) ++
   new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
   new chipyard.config.WithSystemBusWidth(512) ++
-  new saturn.shuttle.WithShuttleVectorUnit(vLen = 512, dLen = 512, VectorParams.CUTErefParams, mLen = Option(512)) ++
+  new saturn.shuttle.WithShuttleVectorUnit(vLen = 512, dLen = 512, params = VectorParams.refParams.copy(vlrobEntries = 16, vlissqEntries = 16, vsissqEntries = 16, vxissqEntries = 16, vpissqEntries = 16, vlifqEntries = 16, vsifqEntries = 16, vliqEntries = 16, vsiqEntries = 16), mLen = Option(512)) ++
   new shuttle.common.WithTCM(address = 0x70000000L, size = 2L << 20, banks = 2) ++
   new shuttle.common.WithShuttleTileBeatBytes(64) ++
   new shuttle.common.WithNShuttleCores(1) ++
@@ -258,7 +258,7 @@ class CUTE4TopsShuttle512MemorymapDemoConfig extends Config(
   new freechips.rocketchip.subsystem.WithNBanks(4) ++
   new freechips.rocketchip.subsystem.WithInclusiveCache(capacityKB = 512, outerLatencyCycles = 40) ++
   new chipyard.config.WithSystemBusWidth(512) ++
-  new saturn.shuttle.WithShuttleVectorUnit(vLen = 512, dLen = 512, VectorParams.CUTErefParams, mLen = Option(512)) ++
+  new saturn.shuttle.WithShuttleVectorUnit(vLen = 512, dLen = 512, params = VectorParams.refParams.copy(vlrobEntries = 16, vlissqEntries = 16, vsissqEntries = 16, vxissqEntries = 16, vpissqEntries = 16, vlifqEntries = 16, vsifqEntries = 16, vliqEntries = 16, vsiqEntries = 16), mLen = Option(512)) ++
   new shuttle.common.WithTCM(address = 0x70000000L, size = 2L << 20, banks = 2) ++
   new shuttle.common.WithShuttleTileBeatBytes(64) ++
   new shuttle.common.WithNShuttleCores(1) ++
